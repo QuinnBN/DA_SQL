@@ -1,3 +1,6 @@
+
+--An Ecommerce Customer Analysis using google_analytics_sample dataset from Google BigQuery public data. The analysis was performed on Google BigQuery with standardSQL.
+
 #standardSQL
 
 -- 1. Total visit, pageview, transaction and revenue for Jan, Feb and March 2017
