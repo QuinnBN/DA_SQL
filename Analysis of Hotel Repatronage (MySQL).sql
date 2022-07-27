@@ -1,15 +1,18 @@
 
 /*
-This is an analysis on the  “repatronage assignment database.sql” containing contains two tables:
+This is an analysis on the  “repatronage assignment database.sql” containing two tables:
 “repatronage_review_assignment” and “repatronage_user_assignment”.
 The database file includes all the reviews pertinent to TWO popular German hotels.
 */
 
+
 SELECT *
 FROM courseassignment.repatronage_review_assignment;
 
+
 SELECT * 
 FROM courseassignment.repatronage_user_assignment;
+
 
 /*
 1. Question 1: A user may visit the same hotel multiple times.
