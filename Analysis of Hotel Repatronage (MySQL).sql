@@ -1,4 +1,10 @@
 
+/*
+This is an analysis on the  “repatronage assignment database.sql” containing contains two tables:
+“repatronage_review_assignment” and “repatronage_user_assignment”.
+The database file includes all the reviews pertinent to TWO popular German hotels.
+*/
+
 SELECT *
 FROM courseassignment.repatronage_review_assignment;
 
@@ -72,9 +78,9 @@ WITH repat_rating AS(
 		value_rating,
 	-- Sort by order of visit
 	ROW_NUMBER() OVER (PARTITION BY
-							review_table.hotel_id,
-							review_table.user_id
-						ORDER BY review_date) AS row_num
+				review_table.hotel_id,
+				review_table.user_id
+				ORDER BY review_date) AS row_num
 	FROM repatronage_review_assignment AS review_table
 	JOIN repat 
 		ON review_table.hotel_id = repat.hotel_id
@@ -117,9 +123,9 @@ WITH repat_lodging AS(
 		review_table.user_id,
 		review_date,
 	ROW_NUMBER() OVER (PARTITION BY
-							review_table.hotel_id,
-							review_table.user_id
-						ORDER BY review_date) AS row_num
+				review_table.hotel_id,
+			   	review_table.user_id
+				ORDER BY review_date) AS row_num
 	FROM repatronage_review_assignment AS review_table
 	JOIN repat 
 		ON review_table.hotel_id = repat.hotel_id
